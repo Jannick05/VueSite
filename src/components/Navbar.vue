@@ -3,12 +3,12 @@
         <img src="../assets/mcstore.png" class="logo">
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Produkter</a></li>
-                <li><a href="#">About</a></li>
+                <li><router-link :to="{ name: 'home' }" class="secions" href="#">Home</router-link></li>
+                <li><router-link :to="{ name: 'produkter' }" class="secions" href="#">Produkter</router-link></li>
+                <li><router-link :to="{ name: 'about' }" class="secions" href="#">About</router-link></li>
             </ul>
         </nav>
-        <a href="">Profil</a>
+        <a class="profil" href="">LOGIN</a>
     </header>
 
 </template>
@@ -35,7 +35,22 @@ li, a {
     text-decoration: none;
 }
 
-a:hover {
+.profil {
+    padding: 8px 24px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.profil:hover {
+    background: rgb(46, 54, 73);
+    //-webkit-text-fill-color: transparent;
+    color: white;
+    }
+
+.secions:hover {
     background: linear-gradient(to top,var(--tw-gradient-stops));
     --tw-gradient-from: #165ef9;
     --tw-gradient-to: rgb(249 115 22 / 0);
